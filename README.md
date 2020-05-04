@@ -68,3 +68,5 @@ Note that this last command is only a handy shortcut for opening your browser fo
 
 - You can rename your application on the Heroku website, in the applicaion settings. If you rename it, don't forget to update the remote repository doing `git remote remove heroku && git remote add heroku https://git.heroku.com/your-application-name.git`
 - You can add/remove/update voila command line arguments in the `Procfile` file, _e.g._ you can use the dark theme by adding `--theme=dark`
+
+## Changelog
