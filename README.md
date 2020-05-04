@@ -27,24 +27,40 @@ cd voila-heroku
 git commit -m "My awesome app on Heroku!"
 ```
 
-8. Create the Heroku app:
+8. Set the Password
+```bash
+./change_password
+```
+
+9. Set the default notebook to open:
+
+In the JSON configuration file `jupyter_server_config.json` change the `default_url`:
+```json
+  "ServerApp": {
+    "default_url": "voila/render/bqplot.ipynb"
+  }
+```
+the format is `"voila/render/<NOTEBOOK_NAME>"`.
+All the notebooks are set to be inside the local `./notebooks` directory.
+
+10. Create the Heroku app:
 
 ```bash
 heroku create
 ```
 
-9. Now deploy your code:
+11. Now deploy your code:
 
 ```bash
 git push heroku master
 ```
 
-10. That's it! Easy right? Now you can open your app using:
+12. That's it! Easy right? Now you can open your app using:
 
 ```bash
-
 heroku open
 ```
+
 
 Note that this last command is only a handy shortcut for opening your browser following the right url, you can also do that manually.
 
@@ -52,12 +68,3 @@ Note that this last command is only a handy shortcut for opening your browser fo
 
 - You can rename your application on the Heroku website, in the applicaion settings. If you rename it, don't forget to update the remote repository doing `git remote remove heroku && git remote add heroku https://git.heroku.com/your-application-name.git`
 - You can add/remove/update voila command line arguments in the `Procfile` file, _e.g._ you can use the dark theme by adding `--theme=dark`
-
-
-## Test
-
-from notebook.auth import passwd
-passwd()
-
-
-https://github.com/voila-dashboards/voila/pull/270
