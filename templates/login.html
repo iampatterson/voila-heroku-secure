@@ -1,0 +1,10 @@
+{% extends "page.html" %}
+
+{% block site %}
+<form action="{{base_url}}login?next={{next}}" method="post" class="navbar-form pull-left">
+    {{ xsrf_form_html() | safe }}
+    <label for="password_input"><strong>{% trans %}Password:{% endtrans %}</strong></label>
+    <input type="password" name="password" id="password_input" class="form-control">
+    <button type="submit" class="btn btn-default" id="login_submit">{% trans %}Log in{% endtrans %}</button>
+</form>
+{% endblock site %}

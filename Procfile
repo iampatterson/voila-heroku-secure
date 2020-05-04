@@ -1,1 +1,1 @@
-web: voila --port=$PORT --no-browser --template=material --enable_nbextensions=True notebooks/bqplot.ipynb --Voila.log_level=DEBUG
+web: jupyter server --ServerApp.port=$PORT
