@@ -1,6 +1,7 @@
 {
   "ServerApp": {
-    "default_url": "voila/render/bqplot.ipynb"
+    "default_url": "voila/render/bqplot.ipynb",
+    "password": "sha1:14c668e80a1b:7e68828bfc8aeb4ce09b473af6fca51ed746fa99"
   },
   "Voila": {
     "template": "material",
