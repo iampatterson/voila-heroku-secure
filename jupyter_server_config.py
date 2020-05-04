@@ -65,6 +65,7 @@
 #  token login mechanism.
 #
 #  This can be set to false to prevent changing password from the UI/API.
+import os
 c.ServerApp.allow_password_change = False
 
 # Allow requests where the Host header doesn't point to a local server
@@ -79,7 +80,7 @@ c.ServerApp.allow_password_change = False
 #
 #  Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local, along
 #  with hostnames configured in local_hostnames.
-#c.ServerApp.allow_remote_access = False
+c.ServerApp.allow_remote_access = True
 
 # Whether to allow the user to run the server as root.
 #c.ServerApp.allow_root = False
@@ -242,7 +243,8 @@ c.ServerApp.open_browser = False
 #c.ServerApp.password_required = False
 
 # The port the Jupyter server will listen on.
-#c.ServerApp.port = 8888
+c.ServerApp.port = int(os.environ.get("PORT", 8888))
+
 
 # The number of additional ports to try if the specified port is not available.
 #c.ServerApp.port_retries = 50
