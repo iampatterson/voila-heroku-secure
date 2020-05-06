@@ -8,3 +8,5 @@ pytz
 pyzmq
 scikit-learn
 scipy
+pandas
+seaborn
