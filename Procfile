@@ -1,1 +1,1 @@
-web: jupyter server --ServerApp.port=$PORT
+web: jupyter server

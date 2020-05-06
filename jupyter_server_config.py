@@ -1,3 +1,4 @@
+import os
 # Configuration file for jupyter-server.
 
 # ------------------------------------------------------------------------------
@@ -65,7 +66,6 @@
 #  token login mechanism.
 #
 #  This can be set to false to prevent changing password from the UI/API.
-import os
 c.ServerApp.allow_password_change = False
 
 # Allow requests where the Host header doesn't point to a local server
